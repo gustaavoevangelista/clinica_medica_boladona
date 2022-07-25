@@ -8,25 +8,82 @@
     <link rel="stylesheet" type = "text/css"  href="bootstrap/bootstrap.min.css">
     <title>CLÍNICA MÉDICA BOLADONA</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">
-            Clínica Médica Boladona
-        </a> 
-        
-        <div class="collapse navbar-collapse" >
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#quemsomos">Quem somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#servicos">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#marcacoes">Marcações</a>
-                </li>
-            </ul>
+
+<body><!-- essa é a nav de navegação com um dropdown no fim-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a  class="navbar-brand" href="#"><h2>Clínica Médica Boladona</h2></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#quem-somos" >Quem somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos" >Serviços</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a  class="nav-link dropdown-toggle" href="#marcacoes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Marcações</a>
+                        <ul class="dropdown-menu"> <!-- as opçoes do dropdown nao está funcionando-->
+                            <li><a class="dropdown-item" href="#" >Consultas</a></li>
+                            <li><a class="dropdown-item" href="#" >Análises de sangue</a></li>
+                            <li><a class="dropdown-item" href="#" >Ressonâncias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
+
+    <section id="quemsomos">
+        <div class="container-fluid quem-somos text-center margin">
+            <h3 class="margin">QUEM SOMOS</h3>
+            <img src="img/boladao-team.jpg" alt="Boladão Group" width="500px">
+            <h3 class="margin">Um bando de doido querendo ser programador!</h3>
+        </div>
+    </section>
+
+    <section id="servicos"> 
+        <div class="container-fluid text-center margin servicos">
+            <h3 class="margin">SERVIÇOS</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4"><!--aqui uso bootstrap para dividir igualmente a pagina em 3 colunas-->
+                        <img src="img/consulta-medica.jpeg" alt="Consultas médicas" width="100%" height="350px">
+                        <p>Consultas médicas e especialidades</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/analises.webp" alt="Análises de sangue" width="100%" height="350px">
+                        <p>Análises de sangue para os mais variados exames</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/ressonancia.webp" alt="Ressonância" width="100%" height="350px">
+                        <p>Ressonância magnética no capricho</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="marcacoes"> 
+        <div class="container-fluid text-center margin marcacoes">
+            <h3 class="margin">MARCAÇÕES</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4"><!--aqui uso bootstrap para dividir igualmente a pagina em 3 colunas-->
+                        Consultas médicas
+                    </div>
+                    <div class="col-lg-4">
+                        Análises de sangue
+                    </div>
+                    <div class="col-lg-4">
+                        Ressonância
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
