@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" type = "text/css"  href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type = "text/css"  href="bootstrap//css/bootstrap.min.css">
     <title>CLÍNICA MÉDICA BOLADONA</title>
 </head>
 
@@ -22,11 +22,11 @@
                         <a class="nav-link active" aria-current="page" href="#quem-somos" >Quem somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicos" >Serviços</a>
+                        <a class="nav-link" href="#servicos">Serviços</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a  class="nav-link dropdown-toggle" href="#marcacoes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Marcações</a>
-                        <ul class="dropdown-menu"> <!-- as opçoes do dropdown nao está funcionando-->
+                        <ul class="dropdown-menu"> 
                             <li><a class="dropdown-item" href="#" >Consultas</a></li>
                             <li><a class="dropdown-item" href="#" >Análises de sangue</a></li>
                             <li><a class="dropdown-item" href="#" >Ressonâncias</a></li>
@@ -52,15 +52,15 @@
                 <div class="row">
                     <div class="col-lg-4"><!--aqui uso bootstrap para dividir igualmente a pagina em 3 colunas-->
                         <img src="img/consulta-medica.jpeg" alt="Consultas médicas" width="100%" height="350px">
-                        <p>Consultas médicas e especialidades</p>
+                        <p class="margin">Consultas médicas e especialidades</p>
                     </div>
                     <div class="col-lg-4">
                         <img src="img/analises.webp" alt="Análises de sangue" width="100%" height="350px">
-                        <p>Análises de sangue para os mais variados exames</p>
+                        <p class="margin">Análises de sangue para os mais variados exames</p>
                     </div>
                     <div class="col-lg-4">
                         <img src="img/ressonancia.webp" alt="Ressonância" width="100%" height="350px">
-                        <p>Ressonância magnética no capricho</p>
+                        <p class="margin">Ressonância magnética no capricho</p>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4"><!--aqui uso bootstrap para dividir igualmente a pagina em 3 colunas-->
-                        Consultas médicas
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-target="#idtemp" aria-expanded="false">
+                              Consultas médicas
+                            </button>
+                            <ul class="dropdown-menu" id="idtemp">
+                              <li><a class="dropdown-item" href="#">Clínico Geral</a></li>
+                              <li><a class="dropdown-item" href="#">Especialista</a></li>
+                            </ul>
+                          </div>
                     </div>
                     <div class="col-lg-4">
                         Análises de sangue
@@ -85,5 +93,9 @@
             </div>
         </div>
     </section>
+
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
