@@ -1,15 +1,42 @@
 body{
     font: normal 20px Arial;
+    background: rgba(255, 187, 0, 0.488);
+    
+
 }
 
 
 .margin{
     padding: 10px;
+
+}
+
+.img {
+    border-radius: 10%;
 }
 
 .quem-somos{
-    background: rgba(16, 170, 13, 0.597);
+    background: rgba(255, 187, 0, 0.488);
+    border-top:2px solid black;
+    border-bottom: 2px solid black;
 }
+
 .servicos{
-    background: gray;
+    background: rgba(255, 187, 0, 0.488);
+    border-bottom:2px solid black;
+    font-weight: bold;
+}
+
+.bookingsec{
+    background: rgba(255, 187, 0, 0.488);
+    border-bottom:2px solid black;
+    font-weight: bold;
+    
+
+}
+
+footer{
+    font-style: italic;
+    text-align: center;
+    padding-top: 10px;
 }

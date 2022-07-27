@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" type = "text/css"  href="bootstrap/css/bootstrap.min.css">
 
-    
     <title>CLÍNICA MÉDICA BOLADONA</title>
 </head>
 
-<body><!-- essa é a nav de navegação com um dropdown no fim-->
+<body>
+    <!-- essa é a nav de navegação -->
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a  class="navbar-brand" href="#"><h2>Clínica Médica Boladona</h2></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><h2>Clínica Médica Boladona</h2></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -26,13 +26,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#servicos">Serviços</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a  class="nav-link dropdown-toggle" href="#marcacoes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Marcações</a>
-                        <ul class="dropdown-menu"> 
-                            <li><a class="dropdown-item" href="#">Consultas</a></li>
-                            <li><a class="dropdown-item" href="#" >Análises de sangue</a></li>
-                            <li><a class="dropdown-item" href="#" >Ressonâncias</a></li>
-                        </ul>
+                    <li class="nav-item ">
+                        <a  class="nav-link " href="#bookingsec">Marcações</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +37,7 @@
     <section id="quemsomos">
         <div class="container-fluid quem-somos text-center margin">
             <h3 class="margin">QUEM SOMOS</h3>
-            <img src="img/boladao-team.jpg" alt="Boladão Group" width="500px">
+            <img src="img/boladao-team.jpg" alt="Boladão Group"  width="500px">
             <h3 class="margin">Um bando de doido querendo ser programador!</h3>
         </div>
     </section>
@@ -69,80 +64,51 @@
         </div>
     </section>
 
-    <section id="marcacoes"> 
-        <div class="container-fluid text-center margin marcacoes">
-            <h3 class="margin">MARCAÇÕES</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4"><!--aqui uso bootstrap para dividir igualmente a pagina em 3 colunas-->
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Dropdown button
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        Análises de sangue
-                    </div>
-                    <div class="col-lg-4">
-                        Ressonância
-                    </div>
-                </div>
+    <section id="bookingsec">
+        <div class="container-fluid text-center margin bookingsec">
+            <h3>MARCAÇÕES</h3>
+            <div>
+                <p>
+                    Nome: <input type="text" name="txtnome" id="txtnome">
+                </p>
+                <p>
+                    Idade: <input type="number" name="txtidade" id="txtidade">
+                </p>
+                <p>
+                    Telefone: <input type="tel" name="txttel" id="txttel">
+                </p>
+                <p>
+                    Quer fazer marcacao para: 
+                </p>
+                <p>
+                    <input type="radio" name="mar" id="consulta" checked> <!--aqui o name tem que ser igual ao proximo pois se nao da erro na marcacao da box-->
+                    <label for="consulta">Consulta médica</label>
+                    <input type="radio" name="mar" id="analise">
+                    <label for="analise">Análises</label>
+                    <input type="radio" name="mar" id="ress">
+                    <label for="ress">Ressonância</label>
+                </p>
+                <p>
+                    Em qual dia: <input type="date" name="dia" id="dia">
+                </p>
+                <p>
+                    <input type="button" value="Marcar" onclick="marcar()">
+                </p>
+
+            </div>
+
+            <div id="res">
+                Preencha os campos acima para a marcação
             </div>
         </div>
     </section>
 
-    <section id="consultas"> 
-        <div class="container-fluid text-center margin consultas">
-            <h3 class="margin">CONSULTAS</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6"><!--aqui uso bootstrap para dividir igualmente a pagina em 2 colunas-->
-                        <p>Clínico geral</p>
-                        <p>Escolha o médico</p><input type="text" name="txtdoc" id="txtdoc"><input type="button" value="Procurar">
-                    </div>
-                    <div class="col-lg-6">
-                        <p>Especialidades</p>
-                        <p>Escolha a especialidade</p><input type="text" name="txtesp" id="txtesp"><input type="button" value="Procurar">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="analises"> 
-        <div class="container-fluid text-center margin analises">
-            <h3 class="margin">ANÁLISES</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12"><!--aqui uso bootstrap para dividir igualmente a pagina em 1 colunas-->
-                        <p>Escolha o tipo de exame</p><input type="text" name="txtana" id="txtana"><input type="button" value="Procurar">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ressonancia"> 
-        <div class="container-fluid text-center margin ressonancia">
-            <h3 class="margin">RESSONÂNCIA</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12"><!--aqui uso bootstrap para dividir igualmente a pagina em 1 colunas-->
-                        <p>Escolha a data</p><input type="text" name="txtres" id="txtres"><input type="button" value="Verificar">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <footer>
+        <p>&copy; BoladãoTeam</p>
+    </footer>
   
     <script src="bootstrap/js/bootstrap.min.js"></script> 
+    <script src="js/main.js"></script>
     
 </body>
 
