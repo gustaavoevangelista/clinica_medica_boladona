@@ -1,8 +1,7 @@
 body{
     font: normal 20px Arial;
-    background: rgba(255, 187, 0, 0.488);
+    background: gray;
     
-
 }
 
 
@@ -11,27 +10,23 @@ body{
 
 }
 
-.img {
-    border-radius: 10%;
-}
 
 .quem-somos{
-    background: rgba(255, 187, 0, 0.488);
+    background: #FFDD83;
     border-top:2px solid black;
     border-bottom: 2px solid black;
 }
 
 .servicos{
-    background: rgba(255, 187, 0, 0.488);
+    background: #FFDD83;
     border-bottom:2px solid black;
     font-weight: bold;
 }
 
 .bookingsec{
-    background: rgba(255, 187, 0, 0.488);
+    background: #FFDD83;
     border-bottom:2px solid black;
     font-weight: bold;
-    
 
 }
 
